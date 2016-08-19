@@ -1,0 +1,243 @@
+
+<!doctype html>
+<html style="">
+<head>
+<meta charset="gbk">
+<title>精锐&#8226;学汇趣  layer弹层组件移动版</title>
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no">
+<link href="demo.css" type="text/css" rel="stylesheet" />
+
+<script src="layer.m.js"></script>
+
+</head>
+<body>
+<div class="header">
+    <div class="main">
+        <h1>Layer For Mobile<code><script>document.write(layer.v)</script></code></h1>
+        <span>
+            <a href="api.html">文档手册</a>
+            <a href="http://res.sentsin.com/download/layer.mobile-v1.2.zip" id="downs" target="_blank">下载组件包</a>
+            <a href="http://sentsin.com/jquery/layer/">切换到PC版</a>
+        </span>
+    </div>
+</div>
+
+<!-- 320*50 -->
+<div style="text-align:center;">
+    <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="4596903032"></ins>
+</div>
+
+<div class="main">
+    <p>为了精确体验，您可通过手机浏览器访问该页。<a href="javascript:;" id="erweima">手机扫二维码进入</a></p>
+    <p>layer mobile是为移动设备（手机、平板等webkit内核浏览器/webview）量身定做的弹层支撑，采用Native JavaScript编写，完全独立于PC版的layer，您需要按照场景选择使用。<a href="https://github.com/sentsin/layer/tree/master/mobile"  target="_blank">github</a></p>
+    <h2>小试牛刀</h2>
+    <p class="demo" id="trys">
+        <a href="javascript:;">信息框</a>
+        <a href="javascript:;">提示框</a>
+        <a href="javascript:;">询问框</a>
+        <a href="javascript:;">页面层</a>
+        <a href="javascript:;">加载条</a>
+    </p>
+
+</div>
+
+<!-- 469*60 -->
+<div style="text-align:center; width:100%; overflow:hidden;">
+    <ins class="adsbygoogle"
+     style="display:inline-block;width:468px;height:60px"
+     data-ad-client="ca-pub-6111334333458862"
+     data-ad-slot="8703855031"></ins>  
+</div>
+
+<div class="main">
+<button id="seecodes">+查看小试牛刀的演示代码</button>
+<pre id="trycode" style="display:none;">
+/** 以下是小试牛刀的调用代码（此处不展示事件绑定）*/
+//信息框
+layer.open({
+    content: '您好',
+    time: 2
+});
+//提示框
+layer.open({
+    title: '提示',
+    content: 'layer移动版和PC版不能同时使用在同一页面。'
+});
+//询问框
+layer.open({
+    title: '提示',
+    content: '您确定要刷新一下本页面吗？',
+    btn: ['嗯', '不要'],
+    yes: function(index){
+        location.reload();
+        layer.close(index);
+    }
+});
+//页面层
+var pagei = layer.open({
+    type: 1, //1代表页面层
+    content: '可传入html&lt;button class=&quot;closediy&quot;&gt;关闭&lt;/button&gt;',
+    style: 'width:300px; height:200px; border:none;',
+    success: function(olayer){
+        var cla = 'getElementsByClassName';
+        olayer[cla]('closediy')[0].onclick = function(){
+            layer.close(pagei)
+        }
+    }
+});
+//加载层
+layer.open({
+    type: 2,
+    content: '加载测试中'
+});
+</pre>
+
+    <h2>王婆卖瓜</h2>
+    <ol>
+        <li>无需依赖任何库，只加载layer.m.js即可</li>
+        <li>小巧玲珑，性能卓越、柔情似水…</li>
+        <li>具备无以伦比的自适应功能</li>
+        <li>灵活的皮肤自定义支撑，充分确保弹层风格多样化</li>
+        <li>丰富、科学的接口，让弹弹弹层无所不能</li>
+        <li>非自卖、非自夸</li>
+    </ol>
+    
+    <h2>注意事项</h2>
+    <div class="block">
+        <ol>
+            <li>layer mobile不对iframe提供支持。</li>
+            <li>和pc版layer一样遵循LGPL协议，需保留来源。</li>
+        </ol>
+    </div>
+    
+    <h2>开始使用</h2>
+    <p>你可以选择直接引入或模块加载layer，如果是采用Sea.js，方法如下</p>
+    <pre>
+var layer = require('layer'); //可先通过seajs.config配置好layer别名和路径
+</pre>
+    <p>当采用如上方式时，还需打开layer.m.js，修改path，以加载所需的css</p>
+    
+    <h2 style="padding:10px 0 5px; border-bottom:1px solid #ccc;">功能演示</h2>
+    
+    <p><strong>普通信息框，并设置2秒自动关闭：</strong></p>
+    <pre>
+<span id="demo1">layer.open({
+    content: '通过style设置你想要的样式',
+    style: 'background-color:#09C1FF; color:#fff; border:none;',
+    time: 2
+});</span>
+<button onclick="new Function(demo1.innerHTML)();">运行</button>
+</pre>
+
+    <p><strong>提示框，并自定义标题风格：</strong></p>
+    <pre>
+<span id="demo2a">layer.open({
+    title: [
+        '我是标题',
+        'background-color:#8DCE16; color:#fff;'
+    ],
+    content: '标题风格任你定义。。'
+    
+});</span>
+<button onclick="new Function(demo2a.innerHTML)();">运行</button>
+</pre>
+
+    <p><strong>提示框，并显示1个按钮：</strong></p>
+    <pre>
+<span id="demo2">layer.open({
+    content: '通过style设置你想要的样式',
+    btn: ['OK']
+});</span>
+<button onclick="new Function(demo2.innerHTML)();">运行</button>
+</pre>
+
+    <p><strong>询问框，并显示2个按钮，不允许点遮罩关闭：</strong></p>
+    <pre>
+<span id="demo3">layer.open({
+    content: '你是想确认呢，还是想取消呢？',
+    btn: ['确认', '取消'],
+    shadeClose: false,
+    yes: function(){
+        layer.open({content: '你点了确认', time: 1});
+    }, no: function(){
+        layer.open({content: '你选择了取消', time: 1});
+    }
+});</span>
+<button onclick="new Function(demo3.innerHTML)();">运行</button>
+</pre>
+
+    <p><strong>页面层，自定义背景等：</strong></p>
+    <pre>
+<span id="demo4">layer.open({
+    type: 1,
+    content: '空间任意发挥，这里可传入html',
+    style: 'width:240px; height:180px; padding:10px; background-color:#F05133; color:#fff; border:none;'
+});</span>
+<button onclick="new Function(demo4.innerHTML)();">运行</button>
+</pre>
+
+    <p><strong>页面层，全屏：</strong></p>
+    <pre>
+<span id="demo5">var pageii = layer.open({
+    type: 1,
+    content: html,
+    style: 'width:100%; height:'+ document.documentElement.clientHeight +'px; background-color:#3F3F3F; border:none;'
+});</span>
+<button onclick="new Function('var html = demo5a.value;'+demo5.innerHTML)();">运行</button>
+</pre>
+<textarea id="demo5a" style="display:none;">
+    <div style="padding:20px; color:#fff;">
+        Hi，欢迎您体验移动版的layer弹层组件，这看上去是一个新页面的样子。。。
+        <p>此时你一定迫不及待地想关闭掉它，你只需要执行这么一段代码：</p>
+<pre>
+//elem为您获取的元素对象
+elem.addEventListener('click', function(){
+    layer.close(pagei); //pagei为你调用layer时返回的索引
+    //还可以通过layer.closeAll(); 它将关闭所有层  
+})
+</pre>
+<button onclick="layer.closeAll(); layer.open({content:'世界恢复原样 →_→', time:2});  ">我要关闭！！</button>
+   </div>
+</textarea>
+    
+    <h2>结语</h2>
+    <p>例子毕竟只是带你入门，我们更希望你认真去阅读文档手册，那里列举了layer所有的接口，它们会帮助你完成形形色色的交互。我们希望你爱layer mobile胜过于layer PC版。</p>
+    <p class="demo">
+        <a href="api.html">接口</a>
+        <a href="http://sentsin.com/jquery/layer/" target="_blank">layer PC版</a>
+        <a href="http://say.sentsin.com/home-48.html" target="_blank">有问必答</a>
+        <a href="http://sentsin.com/" target="_blank">贤心博客</a>
+    </p>
+    
+    
+    <p style="padding:50px 0; text-align:center; color:#999;">贤心出品 - sentsin.com</p>
+
+</div>
+
+<script src="demo.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+var agent = navigator.userAgent;
+if(document.domain === 'sentsin.com' && agent.indexOf('Android 2.') === -1){
+    for(var i = 0; i < 2; i++){
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+} else {
+    
+}
+</script>
+
+<div style="display:none">
+<script src="http://sentsin.com/item/GetHits.asp?Action=Count&GetFlag=0&m=113&ID=41"></script>
+</div>
+
+<script src='http://w.cnzz.com/c.php?id=30060348'></script>
+</body>
+</html>
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="yes" name="apple-touch-fullscreen" />
+<meta content="telephone=no,email=no" name="format-detection" />
+<script src="js/flexible.js"></script>
+<title>东哥秘书</title>
+<link rel="stylesheet" href="css/skin.css">
+<link rel="stylesheet" href="css/animate.css">
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.transit.js"></script>
+<script src="js/layer.mobile-v1.2/layer.m.js"></script>
+<script src="js/code.js"></script>
+<script >
+$(function(){
+	var wh = $(window).height();
+	var fooh = $(".box_ft_hd").outerHeight(true);
+	var QaList = $(".QaList");
+	var len = QaList.children().length;
+	var IDH;
+	
+	function Scroll(Id){
+		     var k = 0
+		     var lens = $(Id).children(".message").length;
+		     var timer=setInterval(function(){	
+					   $(Id).children(".message").eq(k).fadeIn();
+					   $("#messageList").animate({scrollTop:9999},120); 
+		               k++
+		               if(k==lens){
+		                   clearInterval(timer);
+		               }
+								  
+			 },2000);
+	}
+	
+	Scroll($("#Qa01"))
+	
+})
+
+</script>
+<style>
+body, html {
+	background:#ebebeb;
+}
+
+</style>
+</head>
+<body>
+<!--main start -->
+<div class="main">
+  <div class="main_inner clearfix">
+    <div id="chatArea" class="box chat">
+      <div class="box_bd" id="messageList">
+        <!--答题 开始-->
+        <ul class="QaList clearfix">
+          <li id="Qa01" data-phase="fade" class="clearfix" style="display:block">
+          
+            <!--用户的说话 start-->
+            <div class="message"> <img class="avatar" src="images/jd.jpg" />
+              <div class="content">
+                <div class="bubble bubble_default left">
+                  <div class="bubble_cont">
+                    <div class="plain">
+                      <pre>没有形象，东哥怎么有空去发现你的内在美？</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--用户的说话 end-->
+            <!--我的说话 start-->
+            <div class="message me"> <img class="avatar" src="images/user.jpg" />
+              <div class="content">
+                <div class="bubble bubble_primary right">
+                  <div class="bubble_cont">
+                    <div class="plain">
+                      <pre>美女姐姐！跪求指点！</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--我的说话 end-->
+            <!--用户的说话 start-->
+            <div class="message"> <img class="avatar" src="images/jd.jpg" />
+              <div class="content">
+                <div class="bubble bubble_default left">
+                  <div class="bubble_cont">
+                    <div class="plain">
+                      <pre>新人就该有新鲜样儿，尤其发型决定第一印象！</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--用户的说话 end-->
+             <!--我的说话 start-->
+            <div class="message me"> <img class="avatar" src="images/user.jpg" />
+              <div class="content">
+                <div class="bubble bubble_primary right">
+                  <div class="bubble_cont">
+                    <div class="plain">
+                      <pre>呐尼？</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--我的说话 end-->
+            <!--我的说话 start-->
+            <div class="message"> <img class="avatar" src="images/jd.jpg" />
+              <div class="content">
+                <div class="bubble bubble_default left">
+                  <div class="bubble_cont">
+                    <div class="plain">
+                      <pre>拿去！东哥最中意的发型</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--我的说话 end-->
+           <!--用户的说话 start-->
+            <div class="message nobg"> <img class="avatar" src="images/jd.jpg" />
+              <div class="content">
+                <div class="bubble bubble_default left">
+                  <div class="bubble_cont">
+                    <div class="plain clearfix">
+                      <a href="WeiXinAni01.html" class="img01"><img src="images/1_01.png"></a>
+                      <a href="WeiXinAni04.html" class="img02"><img src="images/1_02.png"></a>
+                      <a href="WeiXinAni02.html" class="img03"><img src="images/1_03.png"></a>
+                      <a href="WeiXinAni03.html" class="img04"><img src="images/1_04.png"></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="hand2"><img src="images/hand.png"></div>
+              </div>
+            </div>
+            <!--用户的说话 end-->
+          </li>
+        </ul>
+        <!--答题 end-->
+      </div>
+      <div class="box_ft">
+        <div class="box_ft_hd"><img src="images/chat_btn.jpg"></div>
+      </div>
+    </div>
+  </div>
+  <div id="h" style=" height:100px"></div>
+</div>
+<!--main end -->
+</body>
+</html>

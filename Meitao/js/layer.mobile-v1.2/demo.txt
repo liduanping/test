@@ -1,0 +1,30 @@
+ function mAlert(Msg, url) {
+        layer.closeAll();
+        if (url != null && url != 'undefined' && url.length > 0) {
+            layer.open({
+                content: Msg,
+                btn: ['х╥хо'],
+                shadeClose: false,
+                yes: function () {
+                    location.href = location.href;
+                }
+            });
+        }
+        else {
+            layer.open({ content: Msg, time: 2 });
+        }
+    }
+
+    function mError(Msg) {
+
+        layer.closeAll();
+        layer.open({
+            content: Msg,
+            style: 'background-color:#F05133; color:#fff;',
+            time: 4
+        });
+    }
+    function mLoading() {
+        layer.closeAll();
+        layer.open({ type: 2, shadeClose: false });
+    }

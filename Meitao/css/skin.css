@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------------------------全局样式-------------------------------------*/
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,span,a,input,textarea,p,blockquote,th,td,header,nav,footer,article,section,aside,time,figure{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+h1,h2,h3,h4,h5,h6{font-weight:normal}
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box;  box-sizing: border-box; }
+ul{list-style:none}
+legend{display:none}
+fieldset,img{border:none;vertical-align:middle; width:100%}
+em,cite,i{font-style:normal}
+input,button,textarea{outline:none;border:0;vertical-align:middle;border:0;font-family:Arial}
+input, input[type="submit"],input[type="reset"],input[type="button"],button {-webkit-appearance:none;border-radius:0}
+select{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+textarea{resize:none}
+html{height:100%;-webkit-text-size-adjust:none; overflow: hidden;}
+body{font:0.375rem/0.5625rem Arial "Microsoft Yahei";position:relative;margin:auto;color:#000;word-break:break-all;height:100%;width:10rem; overflow: hidden; }
+body a{color:#000;text-decoration:none;cursor:pointer}
+body a:hover,body a:active,body a:focus{text-decoration:none;outline:none}
+.bg img,.bg{ width:100%; height:100%}
+/*clearfix*/
+.clearfix:before,.clearfix:after{content:".";display:block;height:0;overflow:hidden;}
+.clearfix:after{clear:both;}
+.clearfix{zoom:1;/* IE < 8 */}
+.auto-x{ position:absolute; left:0; right:0; margin:auto}
+.auto-y{ position:absolute; top:0; bottom:0; margin:auto}
+.page{ width: 10.0rem; margin:0 auto; overflow: hidden;  }
+.rel{ position:relative; }
+.loadingMain{width: 2.421875rem; top: 2.25rem}
+.loadingMain .loading{ text-align: center; margin-top: 0.3125rem }
+.loadingMain .loading p{ font-size:0.375rem; color: #fff;}
+.loadingMain .loading h5{font-size: 0.53125rem;color: #fff}
+.footer{width:10.0rem; height: 1.484375rem; bottom: 0}
+.rightBar{ width: 0.40625rem; position:absolute; top: 0; right: 0; text-align: center; }
+.rightBar ul li{ font-size:0.375rem; color: #4f4f4f }
+#MailList{ background: #fff }
+
+.hand{width:0.921875rem; height:1.359375rem;  top: 0.421875rem; }
+.fadeInUp{animation:fadeInUp 1s 0.5s linear both;-webkit-animation:fadeInUp 1s 0.5s linear both}
+.hand2{animation:flash 1s linear 0.5s infinite;-webkit-animation:flash 1s linear 0.5s infinite}
+
+
+.btns{ width: 1.25rem; position:absolute; top:3.90625rem; right: 0.3125rem }
+.btns a{ display: block; width: 1.25rem;height: 0.671875rem; line-height: 0.671875rem; text-align: center; background: #43bf55; border-radius: 0.078125rem; font-size:0.375rem; color: #fff; margin: 0.40625rem auto }
+.btns a:nth-last-of-type(1){ margin-top: 1rem }
+
+
+.Chat_UserList{ padding-top:10px;}
+.Chat_UserList dl{ margin:0px 0 10px; background:#fff; border:solid 1px #d9dadb}
+.Chat_UserList dl a, .Chat_UserList dl a:visited{ display:block; padding:20px; position:relative; padding-left:90px; background:url(../images/icon9.png) no-repeat 98% center; background-size:auto 30px; min-height:80px;}
+.Chat_UserList dl a:hover{color:#333}
+.Chat_UserList dl a{ display:table; width:100%}
+.Chat_UserList dl a dt{width:60px; height:60px; position:absolute; left:10px; top:50%; margin-top:-30px;}
+.Chat_UserList dl a dt img{ border-radius:100%}
+.Chat_UserList dl a dd{ font-size:15px; color:#3333; display:table-cell; vertical-align:middle}
+.Chat_UserList dl a dd h3{ margin-bottom:2px;}
+
+.main{height:100%; max-width: 10.0rem; margin:0 auto; padding-bottom: 0.46875rem}
+.main_inner{height:100%;overflow:hidden}
+.panel{width:0;float:left;background:#ebebeb}
+.box,.panel{position:relative;height:100%}
+.box{background-color:#ebebeb;overflow:hidden;display:flex;flex-flow:column}
+.box_hd{height:0}
+.box_bd{padding:0.40625rem 0.46875rem;overflow-y:auto;overflow-x:hidden;flex:1}
+.message{margin-bottom:0.65625rem;float:left;width:100%; display: none;}
+.message.Time{ text-align:center}
+.message span{ display:inline-block; background:#e5e5e5; border-radius:0.046875rem; color:#000000; padding:0 0.078125rem; font-size:0.28125rem }
+.message span.imgs{ background:none;}
+.message.me{float:right;text-align:right;clear:right}
+.message .avatar{width:1.125rem;height:1.125rem;float:left;cursor:pointer;}
+.message.me .avatar{float:right}
+.message .nickname{font-weight:400;padding-left:10px;font-size:9pt;height:22px;line-height:24px;color:#4f4f4f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.message .nickname .time{margin-left:10px}
+.message.me .nickname{padding-right:10px}
+.message.me .nickname .time{margin-right:10px}
+.message .content{overflow:hidden; position: relative;}
+.bubble{max-width:75%;min-height:1em;display:inline-block;vertical-align:top;position:relative;text-align:left;font-size:0.46875rem;border-radius:0.15625rem;margin:0 0.35625rem; color: #333333}
+.bubble.bubble_default{background-color:#fff;border:solid 1px #e8e7e8;}
+.bubble:after,.bubble:before{position:absolute;top:0.4375rem;border:0.1875rem solid transparent;content:" ";}
+.bubble.left:after,.bubble.left:before{right:100%;border-color:transparent #e8e7e8 transparent transparent ;}
+.bubble.left:after{border-right-color:#fff;border-right-width:0.225rem}
+.bubble.right:after,.bubble.right:before{left:100%;border-color:transparent transparent transparent #9fe65a }
+.bubble.right:after{border-left-color:#fff}
+.bubble.bubble_primary{background-color:#9fe65a; color:#333333;border:solid 1px #9fe65a;}
+.bubble.bubble_primary.left:after{border-right-color:#9fe65a;border-right-width:0.225rem}
+.bubble.bubble_primary.right.arrow_primary:before,.bubble.bubble_primary.right:after{border-left-color:#9fe65a;border-left-width:0.225rem}
+.bubble.bubble_primary.right.arrow_primary:after{border-left-color:#fff;border-left-width:0.125rem;margin-left:-0.0625rem}
+.bubble.no_arrow{background-color:transparent}
+.bubble.no_arrow:after,.bubble.no_arrow:before{display:none}
+.bubble_cont{word-wrap:break-word;word-break:break-all;min-height:1.125rem}
+.bubble_cont img{vertical-align:middle}
+.bubble_cont .plain{padding:0.25rem; }
+.bubble_cont .plain pre a{color: #0aa5ff; display: inline-block; border-bottom: solid 1px #0aa5ff}
+.img{ width:40%}
+.img .bubble_cont .plain{ padding:0;}
+.img .bubble_cont img.t{ border-radius:5px; }
+.bubble_cont .picture{border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;overflow:hidden;position:relative}
+.bubble_cont .picture img{display:block;cursor:pointer;max-width:100%}
+.box_ft{background-color:#fff;padding:0;}
+.box_ft_hd{display:block; padding:0; height:1.34375rem; width: 10rem; position:fixed; bottom: 0; left:0; right: 0; margin: 0 auto }
+.box_ft_bd{border-top:1px solid #e8e7e8; padding:10px;}
+.qa span{ display:block; padding:0.15625rem; border-radius: 0.078125rem; background:rgba(255,255,155,0.5); font-size:0.46875rem; color: #333333; margin-bottom: 0.1875rem; text-align: justify; }
+.qa span.selected{background: #fff}
+.QaList li{ display: none; }
+.ej{width: 0.515625rem; height: 0.46875rem; position:relative; top: -0.046875rem; display: inline;}
+
+.h1{ display: block; background:rgba(147,147,147,0.23); text-align: center; font-size: 0.375rem; color: #fff;border-radius: 0.15625rem; width: 90%; margin:0 auto 0.46875rem; padding:0.15625rem 0; }
+
+.nobg .bubble.bubble_default, .nobg .bubble.bubble_primary{ border:0; background:none; }
+.nobg .bubble:after, .bubble:before{border:0;}
+.nobg .bubble_cont .plain{ padding: 0; margin-left: -0.234375rem }
+.nobg .bubble{ max-width: 100% }
+.nobg .plain a{ width:3.375rem;  display: block; float: left; margin-bottom: 0.15625rem}
+
+.logo{width:3.375rem; height: 1.640625rem; position: absolute; top: 0.15625rem;left: 0.390625rem}
+.ani{ height:15.75rem; bottom: 0 }
+.ani ul li img:nth-of-type(1){width:10.0rem; opacity: 0  }
+.ani ul li img:nth-of-type(2){width:10.0rem; opacity: 0 }
+
+.ani ul li.anis img:nth-of-type(1){opacity:1;animation:fadeIn 1s linear 0s both;-webkit-animation:fadeIn 1s linear 0s both}
+.ani ul li.anis img:nth-of-type(2){opacity:1;animation:fadeIn 0.5s linear 1s both;-webkit-animation:fadeIn 0.5s linear 1s both}
+
+.loadingGif{ width:2.421875rem; height: 2.40625rem }
+.loadingPng{width: 2.421875rem; height: 2.15625rem; }
+.gif{ width: 2.859375rem; height: 2.4375rem }
+
+.hand2{ width:0.921875rem; height: 1.359375rem; position: absolute; top: 0.3125rem; right: 0; }
+
+
+pre{ margin:0 auto}
+.hide{ display:none}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-thumb{border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;background-color:#c3c3c3}
+::-webkit-scrollbar-track{background-color:transparent}
+
+
+
+@media screen and (max-height:960px){
+  .ani{ bottom: inherit; top: 0; }
+
+}
