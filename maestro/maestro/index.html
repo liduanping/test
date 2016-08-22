@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>美涛</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-78845416-3', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body>
+<div id="panel">
+    <div id="canvasPanel">
+        <canvas id="gameCanvas" width="640" height="1028"></canvas>
+    </div>
+</div>
+<script type="text/javascript" src="http://7xpoh8.com1.z0.glb.clouddn.com/jquery.js?version=45"></script>
+<script type="text/javascript" src="http://7xpoh8.com1.z0.glb.clouddn.com/easeljs-NEXT.combined.js?version=45"></script>
+<script type="text/javascript" src="http://7xpoh8.com1.z0.glb.clouddn.com/preloadjs-NEXT.combined.js?version=5"></script>
+<script type="text/javascript" src="http://7xpoh8.com1.z0.glb.clouddn.com/soundjs-NEXT.combined.js?version=4554"></script>
+<script type="text/javascript" src="http://7xpoh8.com1.z0.glb.clouddn.com/tweenjs-NEXT.min.js"></script>
+
+<script type="text/javascript" src="js/Datas.js?v=0"></script>
+<script type="text/javascript" src="js/Main.js?v=0"></script>
+<script type="text/javascript" src="js/wx.js?v"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        onResize();
+        initGame();
+    });
+</script>
+
+</body>
+</html>

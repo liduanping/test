@@ -1,0 +1,76 @@
+body {
+    font-size: 14px;
+    font-family: '微软雅黑',Arial,sans-serif;
+    height: auto;
+    overflow: hidden;
+    background: #000;
+    margin: 0;
+    padding: 0;
+}
+.hidden {
+    display: none;
+}
+ul,ol {
+    list-style: none;
+}
+.content, canvas {
+    background: white;
+}
+#canvasPanel
+{
+    position:absolute;
+    z-index:0;
+    /*display: none;*/
+}
+
+.hide {
+    display: none;
+}
+#gameCanvas
+{
+    transform-origin: 50% 0;
+}
+#panel {
+    transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0;
+    width: 640px;
+    height: 1028px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background-color: #d1d2d4;
+    border-left: 1px solid #d1d2d4;
+}
+::-webkit-scrollbar-thumb {
+    /*background-color：none;*/
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #d1d2d4;
+}
+::-webkit-scrollbar-thumb:active{
+    background-color:#d1d2d4;
+}
+h3{
+    padding:0 5px 0 5px;
+    margin: 0 5px 0 5px;
+}
+.game-info
+{
+    position: absolute;
+    height: 1207px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.back
+{
+    position: absolute;
+    top: 2390px;
+    height: 100px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.02);
+}
